@@ -13,7 +13,6 @@
 
 <script>
 import Header from '@/Components/Header.vue'
-import axios from 'axios'
 
 export default{
   name: 'app',
@@ -26,26 +25,10 @@ export default{
     };
   },
   mounted(){
-    this.authenticate();
+    
   },
   methods: {
-    async authenticate() {
-      try {   
-        const user = {
-          name: process.env.VUE_APP_USERNAME,
-          password: process.env.VUE_APP_PASS
-        }
-        
-        const res = await axios.post(
-          `${process.env.VUE_APP_FARMFRESH_API_URL}Authenticate`,
-          user      
-        );
-        this.$store.commit('updateToken', res.data.token);
-
-      } catch (error) {
-        console.log(error);
-      }
-    },
+    
   }
 }
 </script>

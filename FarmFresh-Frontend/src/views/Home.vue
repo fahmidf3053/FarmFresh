@@ -6,6 +6,7 @@
 
 <script>
 import LandingPage from '@/Components/HomePage/LandingPage.vue'
+import axios from 'axios'
 
 export default {
   components: {
