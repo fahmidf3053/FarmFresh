@@ -17,5 +17,5 @@ npm run build
 ```
 
 <p align="center">
-  <img src="https://i.imgur.com/LMRIylM.png">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/landingpage.PNG">
 </p>
