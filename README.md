@@ -16,6 +16,27 @@ npm run serve
 npm run build
 ```
 
+## Landing Page
 <p align="center">
   <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/landingpage.PNG">
+</p>
+
+## Promotional Page
+<p align="center">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/promopage.PNG">
+</p>
+
+## Product List Page
+<p align="center">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/shopping.PNG">
+</p>
+
+## Product Detail Page
+<p align="center">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/productpage.PNG">
+</p>
+
+## Search
+<p align="center">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/searchpage.PNG">
 </p>
