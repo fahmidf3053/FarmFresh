@@ -5,6 +5,9 @@ using FarmFreshApiService.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using FarmFreshApiService.Authentication.Models;
+using Microsoft.AspNetCore.Authorization;
+using FarmFreshApiService.Authentication.Repository;
 
 namespace FarmFreshApiService.Controllers
 {
@@ -13,12 +16,30 @@ namespace FarmFreshApiService.Controllers
     public class GatewayController : ControllerBase
     {
         private readonly ProductManager _productManager;
+        private readonly IJWTManagerRepository _jWTManager;
 
-        public GatewayController(IDataAccessService dataAccessService)
+        public GatewayController(IDataAccessService dataAccessService, IJWTManagerRepository jWTManager)
         {
             _productManager = new ProductManager(dataAccessService);
+            _jWTManager = jWTManager;
         }
 
+
+        [AllowAnonymous]
+        [HttpPost("/Authenticate", Name = "Authenticate")]
+        public IActionResult Authenticate([Required] Users user)
+        {
+            var token = _jWTManager.Authenticate(user);
+
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+
+            return Ok(token);
+        }
+
+        [Authorize]
         [HttpGet("/GetAllProducts", Name = "GetAllProducts")]
         public IActionResult GetAllProducts(int pageSize, int pageNumber)
         {
@@ -36,7 +57,7 @@ namespace FarmFreshApiService.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpGet("/GetProductByName", Name = "GetProductByName")]
         public IActionResult GetProductByName([Required] string name, int pageSize, int pageNumber)
         {

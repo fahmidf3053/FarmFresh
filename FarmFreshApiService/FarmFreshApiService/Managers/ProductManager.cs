@@ -1,9 +1,5 @@
-﻿using FarmFreshApiService.DTOs;
-using FarmFreshApiService.Interfaces;
+﻿using FarmFreshApiService.Interfaces;
 using FarmFreshApiService.Models;
-using FarmFreshApiService.Services;
-using FarmFreshApiService.Utils;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +24,7 @@ namespace FarmFreshApiService.Managers
             {
                 List<Products> products = new();
 
-                if (pageSize == 0 && pageNumber == 0)
+                if (pageSize == 0 || pageNumber == 0)
                 {
                     products = _dataAccessService.GetAllProducts().ToList();
                 }
@@ -53,7 +49,7 @@ namespace FarmFreshApiService.Managers
 
                 products = products.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
 
-                if (!(pageSize == 0 && pageNumber == 0))
+                if (!(pageSize == 0 || pageNumber == 0))
                 {
                     products = products.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
                 }
