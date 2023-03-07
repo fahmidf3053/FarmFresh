@@ -1,8 +1,8 @@
 <template>
   <div class="products">
-    <div v-for="item in CardArray" class="main" :key="item.id">
+    <div v-for="item in Products" class="main" :key="item.id">
       <img class="img-item-sm" :src=getImage(item)>
-      <div class="pl-3">{{item.title}}</div>
+      <div class="pl-3">{{item.name}}</div>
       <div class="pl-3">{{item.type}}</div>
     </div>
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  props: ['CardArray'],
+  props: ['Products'],
   name: 'Card',
   methods: {
     addtoCart(it) {
@@ -20,13 +20,14 @@ export default {
      this.$store.commit('addtoInfo', it)
     },
     getImage(item){
-      return require('@/assets/products/'+item.img)
+      return require('@/assets/products/'+item.image)
     }
   }
 }
 </script>
 
 <style scoped>
+
 
 .products {
   display: grid;

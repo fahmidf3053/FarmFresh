@@ -64,7 +64,7 @@ export default {
             //console.log("Scrolling up");
           }
           else if(currentScrollPosition > this.scrollPosition && !this.pageRefreshed){           
-            this.$router.push({ path: 'products' })
+            this.$router.push({ path: `/products/all` })
           }
 
           this.scrollPosition = window.scrollY

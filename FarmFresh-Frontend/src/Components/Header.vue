@@ -2,17 +2,17 @@
   <div class="container-flex sticky">
     <nav class="navbar">
         <div class="col-2">
-          <a class="navbar-brand py-0" href="/">
-            <img src="@/assets/fi-logo.svg">
+          <a class="navbar-brand py-0">
+            <img src="@/assets/fi-logo.svg" @click.prevent="clearSearch()">
           </a>
         </div>
         <div class="col-9 pt-4">
           <div class="row">
             <div class="col-5 p-0">
-              <input class="p-2 searc" type="text" v-model="input" placeholder="Search for a product or brand" />
+              <input class="p-2 searc" type="text" v-model="inputName" placeholder="Search for a product or brand" />
             </div>
             <div class="col-2 p-0">
-              <img class="searcicon p-2" src="@/assets/search.svg">
+              <img class="searcicon p-2" src="@/assets/search.svg" @click.prevent="searchProduct(inputName)">
             </div>
           </div>
         </div>
@@ -32,14 +32,31 @@ export default {
   },
   data() {
     return {
-      input: ''
+      inputName: ''
     }
   },
+  mounted() {
+    this.inputName = this.it
+  },
   computed: {
-
+    it(){
+      return this.$store.state.searchedName
+    }
   },
   methods: {
-
+    searchProduct(name) {
+      this.$store.commit('updateSerchedName', name);
+      if(name == null || name == '')
+      {
+        name = 'all';
+      }
+      window.location.href = `/products/${name}`
+    },
+    clearSearch(){
+      this.inputName = '';
+      this.$store.commit('updateSerchedName', '');
+      this.$router.push({ path: '/' })
+    }
   }
 }
 </script>
@@ -69,6 +86,10 @@ nav {
 .searcicon {
   height: 60%;
   background-color: #2e75b4;
+}
+
+.searcicon:hover{
+  opacity: .5;
 }
 
 .btn-sm{

@@ -1,14 +1,14 @@
 <template>
   <div class="grid">
-    <a href="/products">On sales!</a>
-    <a href="/products">New</a>
-    <a href="/products">Shop by Store</a>
-    <a href="/products">Fruit and Veg</a>
-    <a href="/products">Meat & Seafood</a>
-    <a href="/products">Dairy and Chilled</a>
-    <a href="/products">Bakery</a>
-    <a href="/products">Beverages</a>
-    <a href="/products">Bakery</a>
+    <a href="/products/all">On sales!</a>
+    <a href="/products/all">New</a>
+    <a href="/products/all">Shop by Store</a>
+    <a href="/products/all">Fruit and Veg</a>
+    <a href="/products/all">Meat & Seafood</a>
+    <a href="/products/all">Dairy and Chilled</a>
+    <a href="/products/all">Bakery</a>
+    <a href="/products/all">Beverages</a>
+    <a href="/products/all">Bakery</a>
   </div>
 </template>
 

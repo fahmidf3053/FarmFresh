@@ -9,23 +9,7 @@ export default new Vuex.Store({
   state: {
     infoPage:[],
     cartItems:[],
-    items: [
-      {
-        id:0,
-        img: '1.png',
-        title: 'sofa 243',
-        price: 156,
-        color: 'yellow',
-        type: 'sofa'
-      }, {
-        id:1,
-        img: '2.png',
-        title: 'lamp 54',
-        price: 756,
-        color: 'yellow',
-        type: 'lamp'
-      }
-    ]
+    searchedName: ''
   },
   plugins: [createPersistedState()],
   getters: {
@@ -55,6 +39,9 @@ export default new Vuex.Store({
     },
     addtoInfo(state, n) { // Info Component
        return state.infoPage.push(n)
+    },
+    updateSerchedName(state, n) {
+      return state.searchedName = n
     }
   },
 })
