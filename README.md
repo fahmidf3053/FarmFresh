@@ -40,3 +40,10 @@ npm run build
 <p align="center">
   <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/searchpage.PNG">
 </p>
+
+## To run the backend of FarmFresh, please go to the FarmFreshApiService and Database Scripts will be found under DBScripts Folder
+
+### After running the FarmFreshApiService, following apis will be available
+<p align="center">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/apilist.PNG">
+</p>
