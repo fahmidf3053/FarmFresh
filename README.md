@@ -1,7 +1,7 @@
 # FarmFresh
 
-> An online supermarket offering a huge range of grocery products
-> Developed with ASP.NET Core MVC &&  Vue.js
+> An online supermarket offering a huge range of grocery products.
+>  Developed with ASP.NET Core MVC &&  Vue.js
 
 ## To run the frontend of FarmFresh, please go to the FarmFresh-Frontend
 
