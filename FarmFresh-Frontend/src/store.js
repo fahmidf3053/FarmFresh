@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     infoPage:[],
     cartItems:[],
-    searchedName: ''
+    searchedName: '',
+    token: ''
   },
   plugins: [createPersistedState()],
   getters: {
@@ -42,6 +43,9 @@ export default new Vuex.Store({
     },
     updateSerchedName(state, n) {
       return state.searchedName = n
+    },
+    updateToken(state, n) {
+      return state.token = n
     }
   },
 })

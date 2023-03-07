@@ -44,29 +44,30 @@ export default {
   },
   methods: {
     async getAllProducts() {
-      try {       
-          const res = await axios.get(
-            `${process.env.VUE_APP_FARMFRESH_API_URL}GetAllProducts?pageSize=0&pageNumber=0`,
-            {},
-            
-          );
-          this.products = res.data;       
+      try {     
+        const headers = { 'Authorization': 'Bearer '+this.$store.state.token};  
+        const res = await axios.get(
+          `${process.env.VUE_APP_FARMFRESH_API_URL}GetAllProducts?pageSize=0&pageNumber=0`,
+            {headers}
+          
+        );
+        this.products = res.data;       
       } catch (error) {
         console.log(error);
       }
     },
     async getProductByName(name) {
       try {
-          console.log(name);
           if(name == 'all' || name == '')
           {
             this.getAllProducts();
           }
           else
-          {
+          { 
+            const headers = { 'Authorization': 'Bearer '+this.$store.state.token};
             const res = await axios.get(
               `${process.env.VUE_APP_FARMFRESH_API_URL}GetProductByName?name=${name}&pageSize=0&pageNumber=0`,
-              {},
+              {headers}
               
             );
             this.products = res.data; 

@@ -17,6 +17,7 @@ export default {
     }
   },
   created() {
+      this.authenticate();
       if (!this.$isServer) {
         window.addEventListener('scroll', this._scrollListener)
       }
@@ -37,7 +38,24 @@ export default {
           }
 
           this.scrollPosition = window.scrollY
-    }
+    },
+    async authenticate() {
+      try {   
+        const user = {
+          name: process.env.VUE_APP_USERNAME,
+          password: process.env.VUE_APP_PASS
+        }
+        
+        const res = await axios.post(
+          `${process.env.VUE_APP_FARMFRESH_API_URL}Authenticate`,
+          user      
+        );
+        this.$store.commit('updateToken', res.data.token);
+
+      } catch (error) {
+        console.log(error);
+      }
+    },
   }
 }
 
