@@ -19,7 +19,7 @@
 # Open the project folder
 cd FarmFresh-Frontend && npm install
 
-# FOR DEV: If you have **vue/cli 3** then through **vue ui** you can import the file and serve it. else 
+# FOR RUN: 
 npm run serve
 
 # FOR BUILD: 
