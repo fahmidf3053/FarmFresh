@@ -7,13 +7,12 @@
 ## Architecture Diagram of FarmFresh
 
 
-
-## To run the frontend of FarmFresh, please go to the FarmFresh-Frontend
-
-
 <p align="center">
   <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/Architecture.png">
 </p>
+
+
+## To run the frontend of FarmFresh, please go to the FarmFresh-Frontend
 
 
 ``` bash
