@@ -57,7 +57,7 @@ npm run build
 
 
 
-## Name: Authenticate
+## Name: /Authenticate
 ``` bash
 -> Method type: POST
 -> Authorization: none
@@ -77,22 +77,23 @@ npm run build
                }
 ```
 
-## Name: GetAllProducts
+## Name: /GetAllProducts
 ``` bash
 -> Method type: GET
 -> Authorization: Bearer Token (You can get token by calling Authenticate API. Each token is valid for 10 minutes)
 -> Params: 
-    --------------------------------------------------------------
+    ---------------------------------------------------------------
     Name      -  Type  -  Required -          Description
-    --------------------------------------------------------------
-    --------------------------------------------------------------
-    pageSize  -   int  -   No     - No of entry you want in a page
-    --------------------------------------------------------------
-    pageNumber -  int  -   No     - page no you want
-    --------------------------------------------------------------
+    ---------------------------------------------------------------
+    ---------------------------------------------------------------
+    pageSize  -   int  -   No     - No of entry you want in a page.
+    ---------------------------------------------------------------
+    pageNumber -  int  -   No     - page no you want to see.
+    ---------------------------------------------------------------
 -> Request Body: none
 -> Response:
    -> Status: 200 for Success
+   -> Type: JSON Array (List of Product)
    -> Example: [
                 {
                   "id": 1,
@@ -111,6 +112,38 @@ npm run build
                   "type": "Packet",
                   "image": "salmon.png",
                   "origin": "USA"
-              }
-            ]
+               }
+              ]
+```
+
+## Name: /GetProductByName
+``` bash
+-> Method type: GET
+-> Authorization: Bearer Token (You can get token by calling Authenticate API. Each token is valid for 10 minutes)
+-> Params: 
+    ---------------------------------------------------------------
+    Name      -  Type  -  Required -          Description
+    ---------------------------------------------------------------
+    ---------------------------------------------------------------
+    name      - string -   Yes    - Name of the Product.
+    ---------------------------------------------------------------
+    pageSize  -   int  -   No     - No of entry you want in a page.
+    ---------------------------------------------------------------
+    pageNumber -  int  -   No     - page no you want to see.
+    ---------------------------------------------------------------
+-> Request Body: none
+-> Response:
+   -> Status: 200 for Success
+   -> Type: JSON Array (List of Product)
+   -> Example: [               
+                {
+                  "id": 2,
+                  "name": "Salmon",
+                  "about": "From the heart of the french Alps after a journey of more than 70 years, springs this Ripe Blue Grapes.",
+                  "price": 300.00,
+                  "type": "Packet",
+                  "image": "salmon.png",
+                  "origin": "USA"
+               }
+              ]
 ```
