@@ -4,13 +4,17 @@
 > An online supermarket offering a huge range of grocery products.
 >  Developed with ASP.NET Core MVC &&  Vue.js
 
+## Architecture diagram of FarmFresh
+
+
+
 ## To run the frontend of FarmFresh, please go to the FarmFresh-Frontend
 
 
 
 ``` bash
 # Open the project folder
-cd Vue-Ecom && npm install
+cd FarmFresh-Frontend && npm install
 
 # FOR DEV: If you have **vue/cli 3** then through **vue ui** you can import the file and serve it. else 
 npm run serve
