@@ -2,14 +2,18 @@
 
 
 > An online supermarket offering a huge range of grocery products.
->  Developed with ASP.NET Core MVC &&  Vue.js
+>  Developed with ASP.NET Core MVC &&  Vue.js.
 
-## Architecture diagram of FarmFresh
+## Architecture Diagram of FarmFresh
 
 
 
 ## To run the frontend of FarmFresh, please go to the FarmFresh-Frontend
 
+
+<p align="center">
+  <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/Architecture.png">
+</p>
 
 
 ``` bash
