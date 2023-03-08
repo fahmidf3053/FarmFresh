@@ -1,5 +1,6 @@
-# FarmFresh
-
+<p align="center">
+  <h1>FarmFresh</h1>
+</p>
 > An online supermarket offering a huge range of grocery products.
 >  Developed with ASP.NET Core MVC &&  Vue.js
 
