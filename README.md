@@ -1,4 +1,4 @@
-#FarmFresh
+# FarmFresh
 
 > An online supermarket offering a huge range of grocery products.
 >  Developed with ASP.NET Core MVC &&  Vue.js
@@ -52,9 +52,9 @@ npm run build
 
 ## Name: Authenticate
 ``` bash
-#### Authorization: 
+-> Authorization: 
 none
-#### Request Body:
+-> Request Body:
 Type: JSON
 Required: Yes
 Example:
@@ -62,7 +62,7 @@ Example:
   "name": "username",
   "password": "xxxxxx"
 }
-#### Response:
+-> Response:
 Status: 200 for Success
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImZhcm1mcmVzaCIsIm5iZiI6MTY3ODI1MDEyMCwiZXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
