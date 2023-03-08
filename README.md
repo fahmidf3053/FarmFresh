@@ -1,6 +1,5 @@
-<p align="center">
-  #FarmFresh
-</p>
+#FarmFresh
+
 > An online supermarket offering a huge range of grocery products.
 >  Developed with ASP.NET Core MVC &&  Vue.js
 
@@ -48,3 +47,25 @@ npm run build
 <p align="center">
   <img src="https://github.com/fahmidf3053/FarmFresh/blob/main/Documents/ScreenShots/apilist.PNG">
 </p>
+
+#API documentation
+
+## Name: Authenticate
+``` bash
+#### Authorization: 
+none
+#### Request Body:
+Type: JSON
+Required: Yes
+Example:
+{
+  "name": "username",
+  "password": "xxxxxx"
+}
+#### Response:
+Status: 200 for Success
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImZhcm1mcmVzaCIsIm5iZiI6MTY3ODI1MDEyMCwiZXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "refreshToken": null
+}
+```
